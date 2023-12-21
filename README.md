@@ -50,7 +50,7 @@ end ```
 
 You can also make the test data driven
 
-``` # spec/pages/google_search_page.rb
+ # spec/pages/google_search_page.rb
 
 class GoogleSearchPage
   include Capybara::DSL
@@ -78,7 +78,7 @@ class GoogleSearchPage
 end```
 
 
-``` # spec/google_search_spec.rb
+ # spec/google_search_spec.rb
 
 require "spec_helper"
 require_relative "./pages/google_search_page"
@@ -103,4 +103,4 @@ describe "Google Search", type: :feature do
       end
     end
   end
-end ```
+end 
