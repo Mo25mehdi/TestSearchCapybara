@@ -15,6 +15,7 @@ Click on the submit button to view the search results.
 Look for a result that contains the link "connect.clover.com."
 
 SETUP
+
 1. Make a directory for the project
 
 2. Initilaize New Ruby project
