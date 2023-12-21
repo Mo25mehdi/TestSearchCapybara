@@ -76,7 +76,7 @@ class GoogleSearchPage
   def first_result_text
     first("div.rc")&.text
   end
-end```
+end
 
 
  # spec/google_search_spec.rb
