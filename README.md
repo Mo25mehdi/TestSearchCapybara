@@ -20,7 +20,8 @@ SETUP
 
 2. Initilaize New Ruby project
    ```
-bundle init```
+bundle init
+```
 
 
 3. Open gemfile and add necessary gems along with other gems required for drivers
@@ -39,27 +40,22 @@ bundle install
 
 
 5. Configure Cpaybara by editing spec_helper.rb in the spec directory
-```
-require "capybara/rspec"
+``` require "capybara/rspec"
 require "selenium-webdriver"
 
 Capybara.configure do |config|
   config.run_server = false
   config.default_driver = :selenium_chrome
   config.app_host = "https://www.google.com"
-end 
-```
+end ```
 
 6. To run the test use the command:
-   ```
-   rspec
-```
+   ``` rspec```
 
 
 You can also make the test data driven
 
-```
-# spec/pages/google_search_page.rb
+``` # spec/pages/google_search_page.rb
 
 class GoogleSearchPage
   include Capybara::DSL
@@ -84,8 +80,7 @@ class GoogleSearchPage
   def first_result_text
     first("div.rc")&.text
   end
-end
-```
+end```
 
 
 ```
