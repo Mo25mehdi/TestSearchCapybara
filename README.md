@@ -35,14 +35,14 @@ SETUP
 
 
 5. Configure Cpaybara by editing spec_helper.rb in the spec directory
-``` require "capybara/rspec"
+require "capybara/rspec"
 require "selenium-webdriver"
 
 Capybara.configure do |config|
   config.run_server = false
   config.default_driver = :selenium_chrome
   config.app_host = "https://www.google.com"
-end ```
+end 
 
 6. To run the test use the command:
     rspec
