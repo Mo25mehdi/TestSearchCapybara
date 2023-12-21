@@ -18,8 +18,8 @@ SETUP
 
 1. Make a directory for the project
 
-2. Initilaize New Ruby project
-   ```bundle init```
+2. Initilaize New Ruby project:
+   bundle init
 
 
 3. Open gemfile and add necessary gems along with other gems required for drivers
@@ -31,7 +31,7 @@ SETUP
 ```
 
 4. install the gems
-```bundle install```
+   bundle install
 
 
 5. Configure Cpaybara by editing spec_helper.rb in the spec directory
@@ -45,7 +45,7 @@ Capybara.configure do |config|
 end ```
 
 6. To run the test use the command:
-   ``` rspec```
+    rspec
 
 
 You can also make the test data driven
@@ -103,4 +103,4 @@ describe "Google Search", type: :feature do
       end
     end
   end
-end```
+end ```
