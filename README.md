@@ -19,7 +19,9 @@ SETUP
 1. Make a directory for the project
 
 2. Initilaize New Ruby project
-   bundle init
+   ```
+bundle init```
+
 
 3. Open gemfile and add necessary gems along with other gems required for drivers
   Example:
