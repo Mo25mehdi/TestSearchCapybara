@@ -50,7 +50,8 @@ end
 
 You can also make the test data driven
 
- # spec/pages/google_search_page.rb
+ ```
+# spec/pages/google_search_page.rb
 
 class GoogleSearchPage
   include Capybara::DSL
