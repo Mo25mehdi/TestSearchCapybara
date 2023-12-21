@@ -19,24 +19,18 @@ SETUP
 1. Make a directory for the project
 
 2. Initilaize New Ruby project
-   ```
-bundle init
-```
+   ```bundle init```
 
 
 3. Open gemfile and add necessary gems along with other gems required for drivers
   Example:
-```
-  source "https://rubygems.org"
+```source "https://rubygems.org"
   gem "capybara"
   gem "selenium-webdriver"
-  gem "rspec"
-```
+  gem "rspec" ```
 
 4. install the gems
-```
-bundle install
-```
+```bundle install```
 
 
 5. Configure Cpaybara by editing spec_helper.rb in the spec directory
@@ -83,8 +77,7 @@ class GoogleSearchPage
 end```
 
 
-```
-# spec/google_search_spec.rb
+``` # spec/google_search_spec.rb
 
 require "spec_helper"
 require_relative "./pages/google_search_page"
@@ -109,5 +102,4 @@ describe "Google Search", type: :feature do
       end
     end
   end
-end
-```
+end```
