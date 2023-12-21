@@ -45,7 +45,7 @@ end
 
 
 You can also make the test data driven
-'''
+```
 # spec/pages/google_search_page.rb
 
 class GoogleSearchPage
@@ -72,9 +72,11 @@ class GoogleSearchPage
     first("div.rc")&.text
   end
 end
-'''
+```
 
-'''
+
+```
+
 # spec/google_search_spec.rb
 
 require "spec_helper"
@@ -101,4 +103,4 @@ describe "Google Search", type: :feature do
     end
   end
 end
-'''
+```
