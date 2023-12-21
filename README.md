@@ -27,7 +27,8 @@ SETUP
 ```source "https://rubygems.org"
   gem "capybara"
   gem "selenium-webdriver"
-  gem "rspec" ```
+  gem "rspec"
+```
 
 4. install the gems
 ```bundle install```
