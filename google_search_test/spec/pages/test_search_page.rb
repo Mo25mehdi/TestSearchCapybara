@@ -33,6 +33,3 @@ class GoogleSearchPage
     first("a", text: "connect.clover.com").click
   end
 end
-
-
-  
