@@ -24,7 +24,6 @@ SETUP
 3. Open gemfile and add necessary gems along with other gems required for drivers
   Example:
 ```
-
   source "https://rubygems.org"
   gem "capybara"
   gem "selenium-webdriver"
@@ -33,15 +32,14 @@ SETUP
 
 4. install the gems
 ```
-   bundle install
+bundle install
 ```
 
 
 5. Configure Cpaybara by editing spec_helper.rb in the spec directory
 ```
-    
 require "capybara/rspec"
-    require "selenium-webdriver"
+require "selenium-webdriver"
 
 Capybara.configure do |config|
   config.run_server = false
@@ -52,11 +50,12 @@ end
 
 6. To run the test use the command:
    ```
-rspec
+   rspec
 ```
 
 
 You can also make the test data driven
+
 ```
 # spec/pages/google_search_page.rb
 
@@ -88,7 +87,6 @@ end
 
 
 ```
-
 # spec/google_search_spec.rb
 
 require "spec_helper"
