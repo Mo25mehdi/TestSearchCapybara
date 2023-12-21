@@ -16,16 +16,20 @@ Look for a result that contains the link "connect.clover.com."
 
 SETUP
 1. Make a directory for the project
+
 2. Initilaize New Ruby project
    bundle init
+
 3. Open gemfile and add necessary gems along with other gems required for drivers
   Example:
   source "https://rubygems.org"
   gem "capybara"
   gem "selenium-webdriver"
   gem "rspec"
+
 4. install the gems
    bundle install
+
 5. Configure Cpaybara by editing spec_helper.rb in the spec directory
     require "capybara/rspec"
     require "selenium-webdriver"
@@ -35,4 +39,5 @@ Capybara.configure do |config|
   config.default_driver = :selenium_chrome
   config.app_host = "https://www.google.com"
 end 
+
 6. To run the test use the command: rspec
