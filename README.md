@@ -42,3 +42,60 @@ Capybara.configure do |config|
 end 
 
 6. To run the test use the command: rspec
+
+
+You can also make the test data driven
+# spec/pages/google_search_page.rb
+
+class GoogleSearchPage
+  include Capybara::DSL
+
+  def visit_google
+    visit "https://www.google.com/"
+  end
+
+  def search_for(query)
+    fill_in "q", with: query
+    click_button "Google Search"
+  end
+
+  def has_results_for?(query)
+    has_content?(query)
+  end
+
+  def has_wikipedia_result?(query)
+    has_selector?("a[href*='https://en.wikipedia.org']", text: query)
+  end
+
+  def first_result_text
+    first("div.rc")&.text
+  end
+end
+
+
+# spec/google_search_spec.rb
+
+require "spec_helper"
+require_relative "./pages/google_search_page"
+
+describe "Google Search", type: :feature do
+  let(:google_search_page) { GoogleSearchPage.new }
+
+  before { google_search_page.visit_google }
+
+  test_data = [
+    ["Capybara", "Capybara - Wikipedia"],
+    ["Ruby", "Ruby Programming Language - Wikipedia"]
+    # Add more data as needed
+  ]
+
+  test_data.each do |query, expected_result|
+    context "searches for '#{query}'" do
+      it "displays the expected result" do
+        google_search_page.search_for(query)
+        expect(google_search_page).to have_results_for(expected_result)
+        expect(google_search_page).to have_wikipedia_result(expected_result)
+      end
+    end
+  end
+end
