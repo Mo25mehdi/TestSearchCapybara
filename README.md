@@ -7,8 +7,8 @@ Google Search:
 Navigate to the Google homepage.
 Perform a search for the term "Capybara."
 Verify that the search results page contains information related to "Capybara," specifically checking for a Wikipedia result.
-Yahoo Search:
 
+Yahoo Search:
 Navigate to the Yahoo homepage.
 Perform a search for the term "Clover Network."
 Click on the submit button to view the search results.
